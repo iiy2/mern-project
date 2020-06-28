@@ -5,6 +5,8 @@ import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
+import Dashboard from './components/dashboard/Dashboard';
+import PrivateRoute from "./components/routing/PrivateRoute";
 import './App.css';
 import setAuthToken from "./utils/setAuthToken";
 import { loadUser } from './actions/auth';
@@ -33,6 +35,7 @@ const App = () => {
                         <Switch>
                             <Route extact path="/register" component={Register} />
                             <Route extact path="/login" component={Login} />
+                            <PrivateRoute extact path="/dashboard" component={Dashboard} />
                         </Switch>
                     </section>
                 </Fragment>
