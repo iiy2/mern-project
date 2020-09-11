@@ -9,6 +9,8 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import EditProfile from './components/profile-forms/EditProfile';
 import PrivateRoute from "./components/routing/PrivateRoute";
+import AddExperience from "./components/profile-forms/AddExperience";
+import AddEducation from "./components/profile-forms/AddEducation";
 import './App.css';
 import setAuthToken from "./utils/setAuthToken";
 import { loadUser } from './actions/auth';
@@ -40,6 +42,8 @@ const App = () => {
                             <PrivateRoute extact path="/dashboard" component={Dashboard} />
                             <PrivateRoute extact path="/create-profile" component={CreateProfile} />
                             <PrivateRoute extact path="/edit-profile" component={EditProfile} />
+                            <PrivateRoute extact path="/add-experience" component={AddExperience} />
+                            <PrivateRoute extact path="/add-education" component={AddEducation} />
                         </Switch>
                     </section>
                 </Fragment>
